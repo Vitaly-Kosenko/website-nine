@@ -1,0 +1,1643 @@
+/* Відео на фоні */
+.video-background {
+    position: fixed;
+    /* Закріплює відео на фоні */
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Ширина на весь екран */
+    height: 100%;
+    /* Висота на весь екран */
+    object-fit: cover;
+    /* Зберігає пропорції і покриває весь екран */
+    z-index: -1;
+    /* Забезпечує, щоб відео було на фоні */
+}
+
+/* Напівпрозорий шар */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Чорний напівпрозорий фон */
+    z-index: 0;
+    /* Під контентом */
+}
+
+/* Основний контент */
+.content {
+    position: relative;
+    z-index: 1;
+    /* Показує контент поверх відео */
+    color: white;
+    /* Колір тексту */
+    text-align: center;
+    padding: 50px;
+}
+
+
+
+
+/* Стилі навігаційної панелі */
+.navbar ul {
+    display: flex;
+    /* робить список горизонтальним */
+    justify-content: center;
+    list-style: none;
+    /* прибирає маркери списку */
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+    /* відстань між елементами */
+}
+
+.navbar ul li:last-child {
+    margin-right: 0;
+    /* прибирає відстань у останнього елемента */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #FFD700;
+    /* змінює колір при наведенні */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    z-index: 2;
+    border-bottom: 2px solid;
+    /* Золотиста тонка смужка */
+}
+/*Кінець навігації*/
+
+/*Початок 2 панелі навігації*/
+
+.navbar2 {
+    position: fixed;
+        /* Фіксує панель у вікні */
+        bottom: 0;
+        /* Розміщує панель внизу */
+        left: 0;
+        /* Вирівнює по лівому краю */
+        width: 100%;
+        /* Панель займає всю ширину */
+        background: rgba(0, 0, 0, 0.7);
+        /* Напівпрозорий чорний фон */
+        color: white;
+        /* Білий текст */
+        padding: 10px 20px;
+        /* Внутрішні відступи */
+        z-index: 2;
+        /* Поверх інших елементів */
+        border-top: 2px solid white;
+        /* Золотиста верхня лінія */
+}
+
+.navbar2 ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar2 ul li {
+    margin-right: 20px;
+}
+
+.navbar2 ul li:last-child {
+    margin-right: 0;
+}
+
+.navbar2 ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar2 ul li a:hover {
+    color: #FFD700;
+    /* Золотий колір при наведенні */
+}
+/*Кінець 2 навігаційної панелі*/
+
+/*Стилізація кнопок перекладу початок*/
+#languageSwitcher {
+    margin-left: auto;
+    /* Переміщує кнопки в правий кут */
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#languageSwitcher button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#languageSwitcher button:hover {
+    background-color: #FFD700;
+    color: black;
+}
+
+#languageSwitcher button:active {
+    background-color: #FF8C00;
+    /* Темно-оранжевий колір під час натискання */
+    transform: scale(0.95);
+    /* Зменшення кнопки */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Легкий тіньовий ефект */
+}
+/*Стилізація кнопок перекладу кінець*/
+
+
+/*Початок сторінки О мультфильме*/
+body {
+    background-image: url('img/fon/fon.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+        /* Закріплює фон */
+    font-family: Arial, sans-serif;
+    /* Встановлюємо шрифт */
+    padding: 20px;
+    /* Додаємо відступи */
+}
+
+.content-container {
+    background-color: white;
+    /* Білий фон для аркуша */
+    padding: 20px;
+    /* Відступи всередині контейнера */
+    border-radius: 10px;
+    /* Закруглені кути */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Тінь для об'єму */
+    max-width: 800px;
+    /* Максимальна ширина */
+    margin: 50px auto;
+    /* Центруємо контейнер */
+
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    /* Текст заголовка */
+}
+
+p {
+    color: black;
+    /* Текст параграфу */
+}
+
+a {
+    color: #0066cc;
+    /* Колір посилання */
+    text-decoration: none;
+    /* Без підкреслення */
+}
+/*Кінець сторінки О мультфильме*/
+
+
+.image-listing {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 40px 10px 10px;
+}
+
+.image-listing img {
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    /* Додає курсор на зображення, щоб вказати на можливість натискання */
+}
+
+
+
+
+/* Стилі для модального вікна */
+.modal {
+    display: none;
+    /* За замовчуванням модальне вікно приховане */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Темний фон */
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.modal-content {
+    max-width: 95vw;
+    max-height: 95vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+/*Кінецб стилів модального віктна*/
+
+/*Персонажи картинки та опис початок*/
+.container {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+    /* Для правильного позиціонування елементів всередині контейнера */
+}
+
+.image {
+    width: 150px;
+    /* Початковий розмір зображення */
+    height: auto;
+    margin-right: 20px;
+    /* Відступ між картинкою та текстом */
+    transition: transform 0.3s ease;
+    /* Плавний ефект для трансформації */
+    cursor: pointer;
+    /* Вказує на можливість натискання */
+
+}
+
+.text {
+    max-width: 600px;
+    /* Максимальна ширина блоку з текстом */
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+
+/* Збільшення при наведенні */
+.image:hover {
+    transform: scale(2.5);
+    /* Збільшуємо зображення на 250% при наведенні */
+    z-index: 10;
+    /* Підвищуємо z-index, щоб зображення залишалося поверх інших елементів */
+}
+
+/*Персонажи картинки та опис кінець*/
+
+/* Стиль для заголовка h2 з золотистою рамкою і чорним контуром */
+.content-container h2 {
+    border: 2px solid #000;
+    /* золотиста рамка */
+    outline: 2px solid #000;
+    /* чорний контур */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    /* закруглені кути */
+    text-align: center;
+    /* рамка тільки навколо заголовка */
+    color: #000;
+    /* білий колір тексту */
+
+}
+
+/* Стиль для контейнера з золотистою рамкою і чорним контуром, прозорий фон */
+.container {
+    border: 2px solid #000;
+    /* золотиста рамка */
+    outline: 2px solid #000;
+    /* чорний контур */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    /* закруглені кути */
+    background-color: transparent;
+    /* прозорий фон */
+    color: #FFf;
+    /* білий текст */
+    text-align: center;
+    /* вирівнювання тексту по центру */
+    text-align: justify;
+}
+
+
+ /*Стиль відео-плеєра початок*/
+.video-js {
+    width: 800px;
+    height: 450px;
+    margin: auto;
+}
+
+/* Кнопка Play — початковий вигляд */
+.vjs-big-play-button {
+    transition: 0.3s ease;
+    border-radius: 50%;
+    background-color: rgba(255, 215, 0, 0.15);
+    /* легке жовте тло */
+    border: 2px solid transparent;
+}
+
+/* ЕФЕКТ НАВЕДЕННЯ на Play */
+.vjs-big-play-button:hover {
+    background-color: rgba(255, 215, 0, 0.5);
+    /* яскравіше жовте */
+    border: 2px solid #FFD700;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+    cursor: pointer;
+}
+
+
+
+.video-js .vjs-play-control:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* або золото */
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* Загальний стиль кнопок */
+.video-js .vjs-control {
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+/* Прозорий ефект наведення */
+.video-js .vjs-control:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* або rgba(255,215,0,0.1) — для легкого золота */
+    cursor: pointer;
+}
+
+
+/*Стиль відео-плеєра кінець*/
+
+/*Стилізація Концепт початок*/
+  img {
+      border: 2px solid black;
+      border-radius: 10px;
+      display: block;
+      margin: 20px auto;
+  }
+  /*Стилізація Концепт кінець*/
+
+
+/*Стилізація для збільшення тексту початок*/
+.large-text {
+    font-size: 18px;
+    color: #000;
+}
+
+.large1-text{
+
+    font-size: 20px;
+        /* 🔹 Збільшений розмір */
+        font-weight: 500;
+        /* 🔹 Напівжирний стиль */
+        color: #000;
+        margin-bottom: 12px;
+        /* 🔹 Відступ після */
+        line-height: 1.5;
+}
+
+.large2-text {
+    font-size: 18px;
+    color: #000;
+    margin-top: -5px;
+}
+/*Стилізація для збільшення тексту кінець*/
+
+/*Стилізація інтервалу початок*/
+ 
+
+ .text-block {
+     font-size: 18px;
+     /* 🔹 Збільшено шрифт */
+     line-height: 1.6;
+     /* 🔹 Міжрядковий інтервал */
+     margin-bottom: 14px;
+     /* 🔹 Відступ між блоками */
+     padding-left: 5px;
+     /* 🔹 Відступ зліва всередині */
+ }
+
+
+ /*Стилізація інтервалу кінець*/
+
+
+
+  /* Стиль списку початок */
+  .ol {
+      margin-left: 20px;
+      /* Відступ списку від краю */
+  }
+
+  .li {
+    margin-bottom: 10px;
+      /* Відступ між пунктами */
+      line-height: 1.6;
+      /* Міжрядковий інтервал */
+  }
+
+  /*Стилізація списку кінець*/
+
+  .plot-section,
+  .lore-section {
+      background: rgba(255, 255, 255, 0.92);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+      border-left: 6px solid #222;
+      margin-bottom: 40px;
+  }
+
+  .section-title {
+      font-size: 26px;
+      text-transform: uppercase;
+      background: linear-gradient(to right, #222, #666);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: inset 0 -3px 0 #FFD700;
+      margin-top: 30px;
+  }
+
+  p {
+      line-height: 1.7;
+  }
+
+  .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+  }
+
+  @keyframes fadeInUp {
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+   /*Стрілка вгору плавна поява при прокруткі сторінки - Початок*/
+  
+  #scrollTopBtn {
+      opacity: 0;
+      pointer-events: none;
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      z-index: 999;
+
+      background-color: rgba(0, 0, 0, 0.7);
+      /* як панель навігації */
+      color: white;
+
+      padding: 14px 18px;
+      border-radius: 10px;
+      font-size: 20px;
+      border: 1px solid white;
+      /* як панель може мати рамку */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+      cursor: pointer;
+      transition: opacity 0.5s ease, transform 0.3s ease;
+  }
+
+  #scrollTopBtn.show {
+      opacity: 1;
+      pointer-events: auto;
+  }
+
+  #scrollTopBtn:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      /* світліший при наведенні */
+      color: black;
+      transform: scale(1.1);
+  }
+
+  #scrollTopBtn i {
+      font-size: 28px;
+  }
+
+    /*Стрілка вгору плавна поява при прокруткі сторінки - Кінець*/
+
+
+
+   /*Скріншоти на ленте ефект при наведенні - Початок*/
+
+  .image-listing img:hover {
+      filter: brightness(1.2);
+      /* або 0.8 — для затемнення */
+      transform: scale(1.03);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+  }
+
+  .image-listing img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+  }
+
+  .image-listing img:hover {
+      outline: 3px solid #FFD700;
+      outline-offset: -5px;
+  }
+
+  .image-listing img:hover {
+      transform: scale(1.05) translateY(-5px);
+  }
+
+  /*Скріншоти на ленте ефект при наведенні - Кінець*/
+
+
+
+  /*Ефект натискання на кнопки у навігаційній панелі - Початок*/
+
+  .navbar ul li a,
+  .navbar2 ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      transition: color 0.3s ease, transform 0.2s ease, background-color 0.2s ease;
+      border-radius: 4px;
+  }
+
+  .navbar ul li a:hover,
+  .navbar2 ul li a:hover {
+      color: #FFD700;
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar ul li a:active,
+  .navbar2 ul li a:active {
+      transform: scale(0.95);
+      background-color: rgba(255, 255, 255, 0.2);
+  }
+
+
+  .navbar ul li a:active,
+  .navbar2 ul li a:active {
+      transform: scale(0.95);
+      box-shadow: inset 0 4px 6px rgba(255, 255, 255, 0.15),
+          0 0 10px rgba(255, 215, 0, 0.4);
+      background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  /*Ефект натискання на кнопки у навігаційній панелі - Кінець*/
+
+
+  /*Текст заголовок - Початок*/
+
+  .hero-title {
+      font-family: 'Merriweather', serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #000;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+  }
+
+  /*Текст заголовок - Кінець*/
+
+  /*Зменшити картинки в ленте - Початок*/
+
+  .image-listing img {
+      max-width: 236px;
+  }
+
+  /*Зменшити картинки в ленте - Кінець*/
+
+  /*Лістинг кнопки - Початок*/
+
+  .slider-wrapper {
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+  }
+
+  .slider-tight {
+      margin-top: -30px;
+      
+  }
+
+  .image-listing {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 10px;
+      padding-bottom: 10px;
+      padding: 10px;
+      scroll-snap-type: x mandatory;
+      scroll-padding-left:0;
+  }
+
+  .thumbnail {
+      max-width: 200px;
+      flex-shrink: 0;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    
+  }
+
+  .thumbnail:hover {
+      transform: scale(1.05);
+  }
+
+  .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      font-size: 32px;
+      padding: 10px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s ease;
+    
+  }
+
+  .arrow:hover {
+      background: rgba(0, 0, 0, 0.9);
+  }
+
+  .arrow.left {
+    left: -0px;
+    
+  }
+
+  .arrow.right {
+      right: -0px;
+  }
+
+  .image-listing {
+      scrollbar-width: none;
+      /* Firefox */
+      -ms-overflow-style: none;
+      /* IE/Edge */
+  }
+
+  .image-listing::-webkit-scrollbar {
+      display: none;
+      /* Chrome, Safari, Opera */
+  }
+
+  
+
+  .arrow {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      font-size: 32px;
+      padding: 10px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s ease;
+      z-index: 1;
+    
+  }
+
+
+  .arrow:hover {
+      background: rgba(0, 0, 0, 0.8);
+  }
+
+  .arrow:active {
+      background: #FFD700;
+      /* або будь-який колір підсвітки */
+  }
+
+   /*Лістинг кнопки - Кінець*/
+
+   /*Картинка і її ефект при наведенні та в розгорнотому варіанті це в Концепті - Початок*/
+
+   .thumbnail2 {
+       border: 3px solid transparent;
+       /* фіксована рамка, невидима */
+       border-radius: 10px;
+       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       border-color: #000;
+ 
+   }
+
+   .thumbnail2:hover {
+       transform: scale(1.03);
+       border-color: #FFD700;
+       /* тільки змінюється колір, не розмір */
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+       outline: 2px solid black;
+    
+   }
+   
+   /*Картинка і її ефект при наведенні та в розгорнотому варіанті це в Концепті - Кінець*/
+
+   /*Лупа модальне вікно - Початок*/
+
+   #zoomLens {
+       position: absolute;
+       width: 150px;
+       height: 150px;
+       pointer-events: none;
+       border-radius: 50%;
+       border: 2px solid #000;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+       background-repeat: no-repeat;
+       background-size: 200%;
+       z-index: 10000;
+
+       display: none;
+       opacity: 0;
+       transform: scale(0.95);
+       transition: opacity 0.4s ease, transform 0.3s ease;
+
+       left: -9999px;
+       top: -9999px;
+       image-rendering: crisp-edges;
+   }
+
+   #zoomLens.visible {
+       opacity: 1;
+       transform: scale(1);
+   }
+   
+  
+   /*Лупа модальне вікно - Кінець*/
+
+
+   /*Документація - Початок*/
+
+   .doc-container {
+       display: flex;
+       flex-wrap: wrap;
+       background-color: #f8f1dc;
+       padding: 20px;
+       border: 1px solid black;
+       box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+       font-family: 'Courier New', monospace;
+       color: #2c1f0f;
+       margin-bottom: 40px;
+   }
+
+   
+   .doc-text {
+       flex: 1;
+       line-height: 1.6;
+       font-size: 16px;
+   }
+
+   
+   .doc-container {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 20px;
+       align-items: flex-start;
+       padding: 20px;
+       align-items: center;
+   }
+
+   /*Документація - Кінець*/
+
+   /*Концепт відступ від заголовку - Початок*/
+
+   .large2-text {
+       margin-top: 20px;
+   }
+
+   /*Концепт відступ від заголовку - Кінець*/
+
+   /*Рука підсказка для користувача що можна картинку збільшити - Початок*/
+
+   .thumbnail2:hover {
+       cursor: pointer;
+   }
+
+   /*Рука підсказка для користувача що можна картинку збільшити - Кінець*/
+
+
+
+   /*Стилізація смуги прокрутки - Початок*/
+
+   html,
+   body {
+       scrollbar-width: thin;
+       scrollbar-color: #444 #1a1a1a;
+   }
+
+   /* Chrome/Edge/Safari */
+   body::-webkit-scrollbar {
+       width: 10px;
+   }
+
+   body::-webkit-scrollbar-thumb {
+       background-color: #444;
+       border-radius: 10px;
+   }
+
+   body::-webkit-scrollbar-track {
+       background-color: #1a1a1a;
+   }
+
+   /*Стилізація смуги прокрутки - Кінець*/
+
+   .comic-caption {
+       text-align: center;
+       font-size: 18px;
+       color: #222;
+       margin-top: 10px;
+   }
+
+
+   /*Стилізація Модального вікна сторінка Таємниця Машини - Початок*/
+
+   .modal-content2 {
+       max-width: 60vw;
+       max-height: 60vh;
+       border-radius: 10px;
+       box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+       transform: scale(1.03);
+       transition: transform 0.3s ease;
+   }
+
+   /*Стилізація Модального вікна сторінка Таємниця Машини - Кінець*/
+
+
+   /*Стилізація Підпису - Початок*/
+
+   .caption-bar2 {
+       background: linear-gradient(to right, #f9e97d, #f0d64d);
+       color: #000;
+       text-align: center;
+       padding: 10px;
+       font-weight: bold;
+       font-size: 16px;
+       border-radius: 5px;
+       margin-top: -20px;
+       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+       border: 1px solid #444;
+   }
+
+   /*Стилізація Підпису - Кінець*/
+
+   /*Стилізація Конверт Канцлера - Почтаок*/
+
+   /* Загальний контейнер */
+   .letter-wrapper {
+       width: 600px;
+       margin: 30px auto;
+       cursor: pointer;
+       transition: all 0.8s ease;
+       position: relative;
+   }
+
+   /* КОНВЕРТ */
+   .envelope {
+       position: relative;
+       z-index: 2;
+       transition: opacity 0.6s ease, transform 0.6s ease;
+   }
+
+   .envelope img {
+       width: 100%;
+       border-radius: 6px;
+       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+       transition: transform 0.3s ease;
+   }
+
+   .envelope img:hover {
+       transform: scale(1.02);
+   }
+
+   /* Зникнення конверта при відкритті */
+   .letter-wrapper.open .envelope {
+       display: none;
+   }
+
+   /* ЛИСТ */
+   .letter-content {
+       position: absolute;
+       transform: translateY(-100%);
+       opacity: 0;
+       transition: transform 0.8s ease, opacity 0.8s ease;
+       background-image: url('./img/fon/Envelope-sheet.jpg');
+       background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
+       padding: 30px;
+       font-family: 'Georgia', serif;
+       font-size: 16px;
+       color: #3e2f1c;
+       line-height: 1.7;
+       border-radius: 10px;
+       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+       text-align: justify;
+       margin-top: 20px;
+
+       /* важливо! */
+       will-change: transform, opacity;
+   }
+
+   /* Коли лист відкритий */
+   .letter-wrapper.open .letter-content {
+       position: static;
+       display: block;
+       opacity: 1;
+       transform: translateY(0);
+   }
+
+   /*Красивий шрифт для листа*/
+   .letter-text {
+       font-family: 'Great Vibes', cursive;
+       font-size: 24px;
+       line-height: 1.6;
+   }
+
+   /* КНОПКА ЗАКРИТТЯ */
+   .button-close {
+       background-color: #3e2f1c;
+       color: white;
+       font-weight: bold;
+       border: none;
+       border-radius: 6px;
+       padding: 10px 20px;
+       font-size: 16px;
+       cursor: pointer;
+       transition: all 0.3s ease;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+   }
+
+   .button-close:hover {
+       opacity: 0.8;
+       transform: scale(1.05);
+       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+   }
+
+   .button-close:active {
+       transform: scale(0.95);
+       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+   }
+  
+
+   /* Адаптивність */
+   @media (max-width: 600px) {
+       .letter-content {
+           padding: 20px;
+           font-size: 14px;
+       }
+
+       .close-btn {
+           padding: 8px 18px;
+           font-size: 15px;
+       }
+   }
+
+   .thumbnail3:hover {
+       transform: scale(1.03);
+       border-color: #FFD700;
+       /* тільки змінюється колір, не розмір */
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+       outline: 2px solid black;
+   }
+
+   .thumbnail3 {
+       border: 3px solid transparent;
+       /* фіксована рамка, невидима */
+       border-radius: 10px;
+       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+       border-color: #000;
+   }
+
+   /*Стилізація Конверт Канцлера - Кінець*/
+
+
+   /*Стилізація Звернення Диктатора до народу - Початок*/
+
+   .dictator-speech {
+       background-image: url('./img/fon/The-Chancellor-and-his-speech.jpg');
+       /* ← шлях до зображення */
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-position: center;
+       color: #111;
+       font-family: 'Georgia', serif;
+       font-size: 18px;
+       border: 3px solid #f5d100;
+       border-radius: 12px;
+       padding: 40px 25px 25px 25px;
+       margin: 60px auto;
+       max-width: 700px;
+       text-align: center;
+       box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+       line-height: 1.8;
+       position: relative;
+   }
+
+
+   .dictator-speech-wrapper {
+       position: relative;
+       margin-top: 40px;
+   }
+
+   .dictator-heading {
+       position: absolute;
+       top: -25px;
+       left: 50%;
+       transform: translateX(-50%);
+       z-index: 2;
+       background: linear-gradient(to right, #111, #444);
+       color: #FFD700;
+       padding: 8px 25px;
+       font-weight: bold;
+       font-size: 16px;
+       border: 2px solid #FFD700;
+       border-radius: 6px;
+       box-shadow: inset 0 -4px 0 #FFD700;
+       letter-spacing: 1px;
+       font-family: 'Arial Black', sans-serif;
+       display: flex;
+       align-items: center;
+       gap: 10px;
+   }
+
+   .dictator-heading .icon {
+       font-size: 18px;
+   }
+
+
+   /* Стиль окремих фраз */
+   .dictator-speech strong {
+       color: #FFD700;
+       font-weight: bold;
+       text-shadow: 0 0 4px #000;
+       display: block;
+       margin-top: 15px;
+       font-size: 20px;
+   }
+
+
+   .dictator-speech .highlight {
+       background-color: rgba(255, 255, 255, 0.2);
+       /* прозорий білий фон */
+       padding: 2px 6px;
+       border-radius: 4px;
+   }
+   
+   /*Стилізація Звернення Диктатора до народу - Кінець*/
+
+
+   /*Сторінка Вороги та Антигоністи Слайдер Канцлера і інших персонажів - Початок*/
+
+   .slider-ferdinand {
+       margin-top: -30px;
+       margin-bottom: -30px;
+       
+   }
+
+   .kotozver-armor {
+       margin-top: -30px;
+       margin-bottom: -30px;
+
+   }
+
+   .birdbeast-armor {
+       margin-top: -30px;
+       margin-bottom: -30px;
+
+   }
+
+   .seamstress-armor {
+       margin-top: -30px;
+       margin-bottom: -30px;
+
+   }
+
+   .peacekeepers-armor {
+       margin-top: -30px;
+       margin-bottom: -30px;
+
+   }
+
+   /*Сторінка Вороги та Антигоністи Слайдер Канцлера і інших персонажів - Кінець*/
+
+
+
+   /*Видвежний слайд-бар - Початок*/
+
+   .content-container2 {
+       position: relative;
+       overflow: visible;
+   }
+
+   /* Коли модалка відкрита, робимо лінзу фіксованою до вікна */
+
+   .bookmark-tab {
+       position: relative;
+       display: inline-flex;
+       align-items: center;
+       align-self: flex-end;
+       gap: 8px;
+       background: #111;
+       color: #fff;
+       border: 2px solid #FFD700;
+       border-radius: 12px;
+       height: 40px;
+       padding: 8px 10px;
+       /* базова товщина */
+       box-shadow: none;
+       cursor: pointer;
+       /* плавне розширення по ширині під час показу тексту */
+       transition: padding .18s ease;
+   }
+
+   .bookmark-tab:hover {
+       background: #333;
+       transform: translateY(-2px);
+       box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+   }
+
+   .bookmark-menu {
+       position: absolute;
+       top: 12px;
+       left: 100%;
+       /* притискаємося ЛІВИМ краєм до білого полотна */
+       margin-left: -10px;
+       /* на скільки “виглядає” назовні */
+       right: auto;
+       /* скасовуємо right */
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       /* щоб список вирівнювався під ярликом */
+       gap: 8px;
+   }
+
+   .content-wrapper {
+       position: relative;
+       display: flex;
+       justify-content: center;
+   }
+
+   /* Іконка «бургер» завжди видима */
+   .bm-icon {
+       font-weight: 900;
+       line-height: 1;
+       font-size: 26px;
+   }
+
+   /* Текст ярлика — схований у закритому стані */
+
+   .bm-label {
+       width: 100%;
+       /* займає всю плашку */
+       text-align: center;
+       white-space: nowrap;
+       overflow: hidden;
+       /* знімаємо ручні зсуви */
+       text-indent: 0 !important;
+       padding-right: 0 !important;
+       /* твої анімації */
+       max-width: 0;
+       opacity: 0;
+       transform: translateX(-4px);
+       font-size: 16px;
+       font-weight: 600;
+       
+   }
+
+    .bm-label {
+        transform: translateX(var(--nudge, 0));
+    }
+    
+    :lang(en) {
+        --nudge: 0px;
+    }
+    
+    :lang(uk) {
+        --nudge: 0px;
+    }
+    
+    :lang(ru) {
+        --nudge: 0px;
+    }
+
+
+
+   /* Відкритий стан: показуємо текст */
+   .bookmark-menu.open .bookmark-tab {
+       padding: 8px 14px;
+       /* трохи ширше, щоб умістити текст */
+        width: 270px;
+        /* підбери свою */
+        box-sizing: border-box;
+        /* паддінги всередині ширини */
+   }
+
+   .bookmark-menu.open .bm-label {
+       max-width: 220px;
+       /* достатньо для фрази */
+       opacity: 1;
+       transform: translateX(0);
+       padding-right: 80px;
+   }
+
+   /* ДРОПДАУН — з’являється ВНИЗ із малою затримкою */
+   .bookmark-list {
+       position: absolute;
+       top: calc(100% + 8px);
+       /* під кнопкою */
+       left: 40px;
+       /* від лівого краю .bookmark-menu (який уже зовні) */
+       right: auto;
+       /* прилягає до зовнішнього краю ярличка */
+       display: flex;
+       flex-direction: column;
+       gap: 8px;
+       max-height: 0;
+       opacity: 0;
+       overflow: visible;
+       pointer-events: none;
+       transform: translateY(-6px);
+       transition:
+        max-height .30s ease .12s,
+        opacity .25s ease .12s,
+        transform .25s ease .12s;
+        align-items: stretch;
+       /* кнопки тягнуться на однакову ширину */
+   }
+
+   .bookmark-menu.open .bookmark-list {
+       max-height: 340px;
+       opacity: 1;
+       transform: translateY(0);
+       pointer-events: auto;
+   }
+
+   /* Кнопки списку (як у тебе) */
+   .bookmark-link {
+       background: #111;
+       color: #fff;
+       border: 2px solid #FFD700;
+       border-radius: 12px;
+       padding: 10px 14px;
+       text-decoration: none;
+       font-weight: 700;
+       box-shadow: none;
+       transition: background-color .15s ease, transform .15s ease;
+       display: flex;
+       /* дає зручне вирівнювання */
+       align-items: center;
+       /* по вертикалі */
+       justify-content: center;
+       /* по горизонталі — САМЕ ЦЕ центрує текст */
+       text-align: center;
+       /* запасний варіант */
+       min-width: 180px;
+       /* за бажанням: щоб усі були однакової ширини */
+   }
+
+   .bookmark-link:active {
+       background-color: rgba(255, 215, 0, 0.8);
+       /* яскраво-жовтий */
+       border: 2px solid #FFD700;
+       transform: scale(0.95);
+       /* легке "вдавлювання" */
+       box-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+   }
+
+   .bookmark-link:hover {
+       background: #333;
+       transform: translateY(-1px);
+   }
+
+   @media (max-width: 900px) {
+       .bookmark-menu {
+           position: fixed;
+           right: 0;
+           top: 90px;
+       }
+
+       .bookmark-tab {
+           top: 0;
+       }
+
+       .bookmark-list {
+           left: auto;
+           right: 52px;
+           /* відкривається ліворуч всередину, щоб не вилазив за край екрана */
+           transform: translateX(8px);
+       }
+
+       .bookmark-menu.open .bookmark-list {
+           transform: translateX(0);
+       }
+   }
+
+   /*Видвежний слайд-бар - Кінець*/
+
+
+   /*Орієнтація портрет лістинг - Початок*/
+
+   .image-listing.posters img {
+       width: 220px;
+       /* фіксована ширина */
+       height: 240px;
+       /* більша висота, робить картинку портретом */
+       object-fit: cover;
+       /* заповнює контейнер і підрізає зайве */
+       border-radius: 8px;
+       border: 2px solid #FFD700;
+       background: #000;
+       /* чорний фон для підрізаних країв */
+   }
+
+   .lightbox {
+       display: none;
+       /* ховає повністю */
+       position: fixed;
+       z-index: 9999;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       background: rgba(0, 0, 0, 0.9);
+       justify-content: center;
+       align-items: center;
+   }
+
+   /* щоб не залишалось "точки" коли приховане */
+   .lightbox img,
+   .lightbox span,
+   .lightbox-caption {
+       display: block;
+   }
+   
+   /*Орієнтація портрет лістинг - Кінець*/
+
+
+   /*Творці та Розробник - Початок*/
+
+   .creator-quote {
+       background: #000;
+       color: #FFD700;
+       border-left: 4px solid #FFD700;
+       padding: 10px 15px;
+       margin-top: 15px;
+       border-radius: 6px;
+       font-style: italic;
+       font-size: 16px;
+       box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+   }
+
+   /* Підпис режисера (золото + рамка) */
+   .creator-caption {
+       background: rgba(20, 20, 20, 0.9);
+       color: #FFD700;
+       border: 1px solid rgba(255, 215, 0, 0.6);
+       border-left: 4px solid #FFD700;
+       border-radius: 6px;
+       padding: 8px 12px;
+       font-size: 15px;
+       text-align: center;
+       margin-top: 10px;
+       box-shadow: 0 0 8px rgba(255, 215, 0, 0.3);
+       transition: all 0.3s ease;
+   }
+
+   
+
+  .subsection-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      margin: 20px 0 25px 0;
+      /* зменшено верхній і нижній відступ */
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #FFD700;
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
+  }
+
+  .subsection-divider::before,
+  .subsection-divider::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background-color: #FFD700;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
+  }
+
+
+  .subsection-divider span {
+      display: inline-block;
+      background: linear-gradient(90deg, #3a3a3a, #2c2c2c, #3a3a3a);
+      /* сіро-металевий фон */
+      color: #FFD700;
+      /* золотий текст */
+      padding: 6px 18px;
+      border: 2px solid #FFEA00;
+      /* яскравіша рамка */
+      border-radius: 6px;
+      box-shadow:
+          0 0 12px rgba(255, 215, 0, 0.4),
+          /* світіння зовні */
+          inset 0 0 6px rgba(255, 215, 0, 0.3);
+      /* легке внутрішнє світіння */
+      letter-spacing: 0.6px;
+      font-weight: 700;
+      text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease;
+  }
+
+  .subsection-divider span:hover {
+      box-shadow:
+          0 0 18px rgba(255, 255, 150, 0.6),
+          inset 0 0 8px rgba(255, 255, 200, 0.4);
+      border-color: #FFF04D;
+  }
+
+  /*Творці та Розробник - Кінець*/
+
+
+  /* === Верхня панель як грід: [←] [скролер UL] [→] === - Початок */
+  .navbar {
+      display: grid;
+      grid-template-columns: 44px 1fr 55px;
+      /* ← контент → */
+      align-items: center;
+      gap: 6px;
+      overflow: visible;
+  }
+
+  .navbar {
+      padding: 8px 10px;
+      /* оптимальна висота */
+  }
+
+  /* Контейнер для скролу */
+  .nav-scroller {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      /* Firefox */
+  }
+
+  .nav-scroller::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* Chrome, Safari */
+
+  /* Кнопки стрілок */
+  .nav-arrow {
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: 1px solid #FFD700;
+      border-radius: 50%;
+      font-size: 22px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.2s ease;
+      user-select: none;
+  }
+
+  /* Показуємо кнопки тільки коли потрібно */
+  .nav-arrow.visible {
+      opacity: 1;
+  }
+
+  /* Ефект наведення */
+  .nav-arrow:hover {
+      background: rgba(255, 215, 0, 0.2);
+      transform: scale(1.1);
+  }
+
+  .nav-arrow:active {
+      background: rgba(255, 215, 0, 0.4);
+      transform: scale(0.95);
+  }
+
+
+  /* Не даємо пунктам стискатися / переноситися */
+  .navbar .nav-scroller {
+      white-space: nowrap;
+  }
+
+  .navbar .nav-scroller li {
+      flex: 0 0 auto;
+  }
+
+  /* фіксує ширину елемента */
+  .navbar .nav-scroller a {
+      display: inline-block;
+      white-space: nowrap;
+      /* без переносу */
+      flex: 0 0 auto;
+  }
+
+  /* за замовчуванням центруємо */
+  .navbar .nav-scroller {
+      display: flex;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      justify-content: center;
+      /* центр, коли все вміщується */
+  }
+
+  .navbar .nav-scroller::-webkit-scrollbar {
+      display: none;
+  }
+
+  /* коли є переповнення — починаємо зліва */
+  .navbar .nav-scroller.is-overflowing {
+      justify-content: flex-start;
+  }
+
+  /* === Верхня панель як грід: [←] [скролер UL] [→] === - Кінець */
+
+
+  /*Повноцінне відео із диска - Початок*/
+
+  .drive-video {
+      width: 100%;
+      max-width: 950px;
+      /* можна збільшити */
+      margin: 0 auto;
+      /* центрування */
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 пропорції */
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      /* красиво */
+  }
+
+  .drive-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+  }
+
+  /*Повноцінне відео із диска - Кінець*/

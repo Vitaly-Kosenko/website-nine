@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Девять</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LJ41D759RL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LJ41D759RL');
+    </script>
+    <link rel="icon" type="image/png" href="img/icon/icon-nine.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        [data-i18n] {
+            visibility: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+    <!-- Відео на фоні -->
+    <video autoplay muted loop class="video-background">
+        <source src="./videos/video-720p.mp4" type="video/mp4" media="(max-width: 720px)">
+        <source src="./videos/video-1080p.mp4" type="video/mp4" media="(min-width: 721px)">
+        <source src="./videos/Nine.mp4" type="video/mp4">
+    </video>
+
+
+    <nav class="navbar">
+
+        <button class="nav-arrow left" aria-label="Scroll left">‹</button>
+
+        <ul class="nav-scroller">
+            <li><a href="About-the-cartoon.html" data-i18n="about-the-cartoon">О мультфильме</a></li>
+            <li><a href="Characters.html" data-i18n="characters">Персонажи</a></li>
+            <li><a href="Concept.html" data-i18n="concept">Концепт</a></li>
+            <li><a href="Comic.html" data-i18n="comic">Комиксы</a></li>
+            <li><a href="Machine-Secret.html" data-i18n="machine-secret-title">Тайна Машины</a></li>
+            <li><a href="Documentation.html" data-i18n="documentation">Документация</a></li>
+            <li><a href="The-State.html" data-i18n="the-state">Государство</a></li>
+            <li><a href="Enemies-and-Antagonists.html" data-i18n="enemies-and-antagonists">Враги и антагонисты</a>
+            </li>
+            <li><a href="Creators-and-Allies.html" data-i18n="creators-and-allies">Создатели и союзники</a></li>
+            <li><a href="Creators-and-Developer.html" data-i18n="menu-creators-developer">Создатели и
+                    Разработчик</a></li>
+        </ul>
+
+        <button class="nav-arrow right" aria-label="Scroll right">›</button>
+
+    </nav>
+
+
+
+    <nav class="navbar2">
+
+        <div id="languageSwitcher">
+            <button data-lang="uk">UA</button>
+            <button data-lang="ru">RU</button>
+            <button data-lang="en">EN</button>
+        </div>
+
+
+    </nav>
+
+
+    <script src="lang.js" defer></script>
+    <script src="Nine.js"></script>
+
+
+    <script>
+        const scroller = document.querySelector('.nav-scroller');
+        const leftBtn = document.querySelector('.nav-arrow.left');
+        const rightBtn = document.querySelector('.nav-arrow.right');
+
+        function updateOverflowState() {
+            const overflows = scroller.scrollWidth > scroller.clientWidth;
+            scroller.classList.toggle('is-overflowing', overflows);
+            if (overflows && scroller.scrollLeft !== 0) scroller.scrollLeft = 0;  // показуємо «О мультфильме»
+            updateArrows();
+        }
+
+        function updateArrows() {
+            const max = scroller.scrollWidth - scroller.clientWidth;
+            leftBtn.classList.toggle('visible', scroller.scrollLeft > 0);
+            rightBtn.classList.toggle('visible', scroller.scrollLeft < max - 1);
+        }
+
+        function scrollByStep(dir) {
+            const step = Math.min(240, Math.round(scroller.clientWidth * 0.8));
+            scroller.scrollBy({ left: dir * step, behavior: 'smooth' });
+        }
+
+        leftBtn.addEventListener('click', () => scrollByStep(-1));
+        rightBtn.addEventListener('click', () => scrollByStep(1));
+        scroller.addEventListener('scroll', updateArrows);
+        window.addEventListener('resize', updateOverflowState);
+        document.addEventListener('DOMContentLoaded', updateOverflowState);
+    </script>
+
+
+</body>
+
+</html>

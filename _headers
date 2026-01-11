@@ -1,0 +1,29 @@
+/videos/video.mp4
+  Cache-Control: public, max-age=31536000, immutable
+
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/style.css
+  Cache-Control: public, max-age=604800
+
+/lang.js
+  Cache-Control: public, max-age=604800
+
+/Nine.js
+  Cache-Control: public, max-age=604800
+
+/index.html
+  Cache-Control: no-cache
+
+/About-the-cartoon.html
+  Cache-Control: no-cache
+
+/Characters.html
+  Cache-Control: no-cache
+
+/Concept.html
+  Cache-Control: no-cache
+
+/Documentation.html
+  Cache-Control: no-cache
