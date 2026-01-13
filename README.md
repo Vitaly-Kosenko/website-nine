@@ -44,17 +44,41 @@ Each topic is presented on a dedicated page for clarity, immersion, and easy nav
 
 ## 🗂 Project Structure
 
-├── index.html
-├── style.css
-├── nine.js
-├── lang.js
-├── documentation.html
-├── machine-secret.html
-├── the-state.html
-├── the-state-.html
+website-nine/
+│
+├── index.html                     # Main page
+├── style.css                      # Global styles
+├── lang.js                        # Language switching logic (UA / RU / EN)
+├── nine.js                        # Core interactive scripts
+│
+├── documentation.html             # Project documentation
+├── machine-secret.html            # The Machine Secret section
+├── the-state.html                 # The State overview
+│
+├── the-state-cathedral.html
+├── the-state-chancellor's-party.html
+├── the-state-city-and-wasteland.html
+├── the-state-human.html
+├── the-state-library.html
+├── the-state-machine-war.html
+├── the-state-the-factory.html
+├── the-state-the-great-world-war.html
+├── the-state-the-resistance.html
+├── the-state-the-watchtower.html
+│
 ├── enemies-and-antagonists.html
-└── enemies-and-antagonists-.html
-
+├── enemies-and-antagonists-beast-cat.html
+├── enemies-and-antagonists-bird-beast.html
+├── enemies-and-antagonists-peacekeepers-(machines).html
+├── enemies-and-antagonists-spider-hunters.html
+├── enemies-and-antagonists-the-seamstress.html
+├── enemies-and-antagonists-tracker-drone.html
+│
+├── img/                           # Images and illustrations
+├── videos/                        # Embedded video materials
+├── audio/                         # Audio assets
+│
+└── headers/                       # Shared UI / layout fragments
 
 ---
 
